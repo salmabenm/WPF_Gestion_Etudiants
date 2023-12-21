@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_Gestion_Etudiants.View.Login.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Gestion_Etudiants.View.Login"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="login" Height="500" Width="380" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF2281D1" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Image  Width="100" Height="100" VerticalAlignment="Top" Margin="125,30,125,0" Source="/Assets/home.png"/>
+
+        <Rectangle  Width="280" Height="240" Fill="White" VerticalAlignment="Top" Margin="35,160,35,0" RadiusY="10" RadiusX="10">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" Direction="0"  RenderingBias="Quality" BlurRadius="15" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Grid Width="280" Height="240" VerticalAlignment="Top" Margin="35,160,35,0">
+            <Label Content=" WELCOME TO LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
+            <StackPanel VerticalAlignment="Center" Margin="10">
+                <TextBox Name="email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" TextChanged="TextBox_TextChanged"/>
+                <PasswordBox Name="password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" />
+            </StackPanel>
+        </Grid>
+
+        <Button VerticalAlignment="Top" Margin="100,383,100,0" Width="150" Content="LOGIN" Click="Button_Click"/>
+    </Grid>
+</Window>
