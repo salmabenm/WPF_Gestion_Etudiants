@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using WPF_Gestion_Etudiants.View.Gestion.Etudiant;
 using WPF_Gestion_Etudiants.View.Gestion.Filiere;
 using WPF_Gestion_Etudiants.View.Gestion.Statistique;
+using WPF_Gestion_Etudiants.View.Login;
 
 namespace WPF_Gestion_Etudiants.View.Gestion
 {
@@ -31,8 +32,34 @@ namespace WPF_Gestion_Etudiants.View.Gestion
 
         }
 
-        
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
        
+
+        private void Etudiant_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Main.Content = new UserControlEtudiant();
+        }
+
+        private void Filiere_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Main.Content = new UserControlFiliere();
+        }
+
+        private void Statistique_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Main.Content = new UserControlStatistique();
+        }
+
+        private void Logout_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            login loginWindow = new login();
+            this.Close();
+            loginWindow.Show();
+        }
     }
 
 
