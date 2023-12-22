@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Gestion_Etudiants.View.Login"
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="login" Height="500" Width="380" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="560" Width="530" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -15,14 +15,21 @@
         <Rectangle Height="280" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF2281D1"/>
-                    <GradientStop Color="#FF34268A" Offset="1"/>
-                    <GradientStop Color="#FF2281D1" Offset="0.5"/>
+                    <GradientStop Color="#55d68b" Offset="0.7"/>
+                    <GradientStop Color="#07Bf96" Offset="0"/>
+                    <GradientStop Color="#55d68b" Offset="1"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
 
-        <Image  Width="100" Height="100" VerticalAlignment="Top" Margin="125,30,125,0" Source="/Assets/home.png"/>
+        <Grid>
+            <!-- Image with Clipping Applied -->
+            <Image Width="100" Height="100" VerticalAlignment="Top" Margin="125,30,125,0" Source="/Assets/home.jpg">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                </Image.Clip>
+            </Image>
+        </Grid>
 
         <Rectangle  Width="280" Height="240" Fill="White" VerticalAlignment="Top" Margin="35,160,35,0" RadiusY="10" RadiusX="10">
             <Rectangle.Effect>
@@ -31,13 +38,19 @@
         </Rectangle>
 
         <Grid Width="280" Height="240" VerticalAlignment="Top" Margin="35,160,35,0">
-            <Label Content=" WELCOME TO LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
+            <Label Content="BIENVENUE AU LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox Name="email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" TextChanged="TextBox_TextChanged"/>
-                <PasswordBox Name="password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" />
+                <TextBox Name="email" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" TextChanged="TextBox_TextChanged"/>
+                <PasswordBox Name="password" materialDesign:HintAssist.Hint="Mot de passe" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" />
             </StackPanel>
         </Grid>
 
-        <Button VerticalAlignment="Top" Margin="100,383,100,0" Width="150" Content="LOGIN" Click="Button_Click"/>
+        <Button VerticalAlignment="Top" Margin="100,383,100,0" Width="150" Content="Login"  Background="#05b790" Click="Button_Click"/>
+        <TextBlock Margin="171,425,147,64">
+            <Run Foreground="#b6b6b6" FontSize="13" Text="N'avez-vous pas"/>
+            <Run Text=" "/>
+            <Run Foreground="#07bf96" FontSize="13" Text="de compte ?"/>
+        </TextBlock>
+        <Button VerticalAlignment="Top"  Width="150" Content="Registre"  Background="#05b790" Click="Button_ClickRegister" Margin="185,455,185,0"/>
     </Grid>
 </Window>

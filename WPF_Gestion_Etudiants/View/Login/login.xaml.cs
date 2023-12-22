@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_Gestion_Etudiants.Data;
 using WPF_Gestion_Etudiants.View.Gestion;
+using WPF_Gestion_Etudiants.View.Registre;
 
 namespace WPF_Gestion_Etudiants.View.Login
 {
@@ -69,6 +70,12 @@ namespace WPF_Gestion_Etudiants.View.Login
             }
         }
 
+        private void Button_ClickRegister(object sender, RoutedEventArgs e)
+        {
+            registre registreWindow = new registre();
+            registreWindow.Show();
 
+            Close();
+        }
     }
 }
