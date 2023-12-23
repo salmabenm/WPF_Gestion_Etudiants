@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -154,9 +157,16 @@
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,6 +177,16 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Telerik.Reporting, Version=17.2.23.1114, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.Wpf, Version=17.2.23.1114, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls, Version=2023.3.1114.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2023.3.1114.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2023.3.1114.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2023.3.1114.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents, Version=2023.3.1114.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2023.3.1106.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -184,6 +204,38 @@
     </Compile>
     <Compile Include="View\Gestion\Filiere\UserControlFiliere.xaml.cs">
       <DependentUpon>UserControlFiliere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\crptForEach.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptForEach.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\crptStudentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptStudentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\foreachStudent.xaml.cs">
+      <DependentUpon>foreachStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\rpTousEtudiants.xaml.cs">
+      <DependentUpon>rpTousEtudiants.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\selectionEtudiant.xaml.cs">
+      <DependentUpon>selectionEtudiant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\StudentDataSet.cs">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gestion\Reporting\UserControlReporting.xaml.cs">
+      <DependentUpon>UserControlReporting.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Gestion\Statistique\InfoCard.xaml.cs">
       <DependentUpon>InfoCard.xaml</DependentUpon>
@@ -221,6 +273,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Gestion\Filiere\UserControlFiliere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gestion\Reporting\foreachStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gestion\Reporting\rpTousEtudiants.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gestion\Reporting\selectionEtudiant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gestion\Reporting\UserControlReporting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,10 +330,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Gestion\Reporting\crptForEach.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptForEach.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Gestion\Reporting\crptStudentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptStudentReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Gestion\Reporting\StudentDataSet.xsc">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Gestion\Reporting\StudentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Gestion\Reporting\StudentDataSet.xss">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +363,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\reporting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
