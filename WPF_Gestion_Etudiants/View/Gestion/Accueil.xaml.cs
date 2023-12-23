@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 
 using WPF_Gestion_Etudiants.View.Gestion.Etudiant;
 using WPF_Gestion_Etudiants.View.Gestion.Filiere;
+using WPF_Gestion_Etudiants.View.Gestion.Reporting;
 using WPF_Gestion_Etudiants.View.Gestion.Statistique;
 using WPF_Gestion_Etudiants.View.Login;
 
@@ -52,6 +53,11 @@ namespace WPF_Gestion_Etudiants.View.Gestion
         private void Statistique_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Main.Content = new UserControlStatistique();
+        }
+
+        private void Reporting_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Main.Content = new UserControlReporting();
         }
 
         private void Logout_MouseDown(object sender, MouseButtonEventArgs e)
