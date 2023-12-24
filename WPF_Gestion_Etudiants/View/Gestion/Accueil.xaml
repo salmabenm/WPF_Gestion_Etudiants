@@ -51,25 +51,21 @@
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
 
 
-        <Rectangle Height="600" VerticalAlignment="Top">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#55d68b" Offset="0.7"/>
-                    <GradientStop Color="#07Bf96" Offset="0"/>
-                    <GradientStop Color="#55d68b" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/reporting.jpg" Stretch="Uniform"/>
+        </Grid.Background>
         <Grid>
             <!-- Image with Clipping Applied -->
-            <Image Width="100" Height="100" VerticalAlignment="Top" Margin="125,30,125,0" Source="/Assets/home.jpg">
+            <Image Height="100" VerticalAlignment="Top" Margin="450,30,-384,0" Source="/Assets/home.jpg">
                 <Image.Clip>
                     <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
                 </Image.Clip>
             </Image>
         </Grid>
-        <TextBlock Text="Bienvenue sur la plateforme d'administration pour" Foreground="White" FontSize="36" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,230,0,10" Width="866"/>
-        <TextBlock Text=" la gestion des étudiants . " Foreground="White" FontSize="36" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,321,0,0"/>
+        <TextBlock Text="Bienvenue sur la plateforme" Foreground="Black" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,72,0,10" Width="716"/>
+        <TextBlock Text="d'administration" Foreground="Black" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,106,0,10" Width="716"/>
+        <TextBlock Text="pour la Gestion" Foreground="#05b790" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,137,0,10" Width="716"/>
+        <TextBlock Text="des Etudiants" Foreground="Black" FontSize="26" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,169,0,0" Height="405" Width="296"/>
 
 
         <Grid x:Name="GridBackground" Background="#55313131" Opacity="0">
@@ -114,6 +110,13 @@
                         <StackPanel x:Name="Statistiques" Orientation="Horizontal" Margin="10 0" MouseDown="Statistique_MouseDown">
                             <materialDesign:PackIcon Kind="ChartBar" Width="20" Height="20"  Foreground="#05b790" Margin="5" VerticalAlignment="Center"/>
                             <TextBlock Text="Statistique" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="45" Padding="0" Selected="ListViewItem_Selected">
+                        <StackPanel x:Name="Reporting" Orientation="Horizontal" Margin="10 0" MouseDown="Reporting_MouseDown">
+                            <materialDesign:PackIcon Kind="FileReport" Width="20" Height="20"  Foreground="#05b790" Margin="5" VerticalAlignment="Center"/>
+                            <TextBlock Text="Reporting" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
 
