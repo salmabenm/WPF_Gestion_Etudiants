@@ -43,8 +43,12 @@
             <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
         </EventTrigger>
     </Window.Triggers>
+    
+    
 
     <Grid>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
 
 
         <Rectangle Height="600" VerticalAlignment="Top">
@@ -73,6 +77,8 @@
 
 
         </Grid>
+        
+        
         <Button x:Name="ButtonOpen" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
             <materialDesign:PackIcon Kind="Menu" Foreground="#FF313131"/>
         </Button>
