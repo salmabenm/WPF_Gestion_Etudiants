@@ -7,7 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <Label Content="Page statistique" HorizontalAlignment="Left" Margin="367,0,0,0" VerticalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10 0">
+            <uc:infoCard Title="Nombre des étudiants" pourcentage="20" numberOfStudent="200" />
+        </StackPanel>
 
     </Grid>
 </UserControl>
