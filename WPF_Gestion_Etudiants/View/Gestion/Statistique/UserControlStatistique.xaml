@@ -20,19 +20,30 @@
             <uc:InfoCard Title="GAE" pourcentage="20" numberOfStudent="200" />
         </StackPanel>
 
-        <lvc:PieChart Grid.Column="1" Margin="10 0" LegendLocation="Bottom"
-                      Series="{Binding SeriesCollection}" DataClick="PieChart_DataClick"
-                      Hoverable="True"
-                      >
-            <lvc:PieChart.ChartLegend>
-                <lvc:DefaultLegend BulletSize="15" Foreground="Black" />
-            </lvc:PieChart.ChartLegend>
+        <Grid  Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <lvc:PieChart.DataTooltip>
-                <lvc:DefaultTooltip BulletSize="20" SelectionMode="OnlySender" />
-            </lvc:PieChart.DataTooltip>
+            <TextBlock Grid.Row="0" Text="Répartition des étudiants par filières" FontSize="20" FontWeight="SemiBold" Margin="10 0"  TextAlignment="Center"  VerticalAlignment="Center"/>
+            <lvc:PieChart Grid.Row="1" Margin="10 0" LegendLocation="Bottom"
+               Series="{Binding SeriesCollection}" DataClick="PieChart_DataClick"
+               Hoverable="True"
+               >
+                <lvc:PieChart.ChartLegend>
+                    <lvc:DefaultLegend BulletSize="15" Foreground="Black" />
+                </lvc:PieChart.ChartLegend>
 
-        </lvc:PieChart>
+                <lvc:PieChart.DataTooltip>
+                    <lvc:DefaultTooltip BulletSize="20" SelectionMode="OnlySender" />
+                </lvc:PieChart.DataTooltip>
+
+            </lvc:PieChart>
+
+        </Grid>
+
+       
 
 
 
