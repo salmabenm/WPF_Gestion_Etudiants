@@ -202,6 +202,7 @@
     <Compile Include="View\Gestion\Etudiant\UserControlEtudiant.xaml.cs">
       <DependentUpon>UserControlEtudiant.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Gestion\Filiere\FiliereViewModel.cs" />
     <Compile Include="View\Gestion\Filiere\UserControlFiliere.xaml.cs">
       <DependentUpon>UserControlFiliere.xaml</DependentUpon>
     </Compile>
