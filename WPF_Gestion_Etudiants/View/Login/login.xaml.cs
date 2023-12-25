@@ -46,7 +46,7 @@ namespace WPF_Gestion_Etudiants.View.Login
 
                 string query = "SELECT Login, Password FROM users WHERE Login = @Login AND Password = @Password";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, Connections.connection))
                 {
                     command.Parameters.AddWithValue("@Login", userEmail);
                     command.Parameters.AddWithValue("@Password", userPassword);

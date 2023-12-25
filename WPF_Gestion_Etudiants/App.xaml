@@ -5,13 +5,25 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              StartupUri="View/Login/login.xaml">
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Teal" SecondaryColor="Lime"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+              
+
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="mainBorder" TargetType="Border" >
+                <Setter Property="Background"  Value="#1e2e44"/>
+                <Setter Property="Padding"  Value="10"/>
+                <Setter Property="CornerRadius"  Value="10"/>
+
+
+            </Style>
+        </ResourceDictionary>
         
-        <Style x:Key="mainBorder" TargetType="Border" >
-            <Setter Property="Background"  Value="#1e2e44"/>
-            <Setter Property="Padding"  Value="20"/>
-            <Setter Property="CornerRadius"  Value="10"/>
-
-
-        </Style>
+        
     </Application.Resources>
 </Application>

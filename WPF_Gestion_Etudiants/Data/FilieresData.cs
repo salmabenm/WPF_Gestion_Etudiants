@@ -11,6 +11,15 @@ namespace WPF_Gestion_Etudiants.Data
 {
     internal class FilieresData
     {
+
+        private Connections connection;
+
+        public FilieresData()
+        {
+            connection = new Connections();
+        }
+
+
         public List<FiliereModel> getAllFilieresWithCountOfStudent()
         {
             List<FiliereModel> filieres = new List<FiliereModel>();
