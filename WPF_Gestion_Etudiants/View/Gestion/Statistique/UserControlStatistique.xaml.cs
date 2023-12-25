@@ -40,17 +40,17 @@ namespace WPF_Gestion_Etudiants.View.Gestion.Statistique
             int totalStudents = (int)filieres.Sum(f => f.NombreEtudiant);
 
             SeriesCollection = new SeriesCollection();
+            this.infoCardStackPanel.Children.Clear();
 
             foreach (Models.FiliereModel filiere in filieres)
             {
-                this.infoCardStackPanel.Children.Clear();
+                
                 InfoCard infoCard = new InfoCard();
                 infoCard.Title = filiere.Nom;
                 infoCard.numberOfStudent = filiere.NombreEtudiant.Value;
                 infoCard.pourcentage = (filiere.NombreEtudiant.Value * 100) / totalStudents;
                 this.infoCardStackPanel.Children.Add(infoCard);
 
-                SeriesCollection.Clear();
 
                 SeriesCollection.Add(new PieSeries
                 {

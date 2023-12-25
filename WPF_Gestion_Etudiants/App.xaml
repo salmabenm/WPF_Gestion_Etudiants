@@ -16,7 +16,7 @@
 
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="mainBorder" TargetType="Border" >
-                <Setter Property="Background"  Value="#1e2e44"/>
+                <Setter Property="Background"  Value="#55d68b"/>
                 <Setter Property="Padding"  Value="10"/>
                 <Setter Property="CornerRadius"  Value="10"/>
 
