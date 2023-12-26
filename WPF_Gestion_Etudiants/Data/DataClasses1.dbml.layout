@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="60cdfcff-b070-4200-b0a5-f650a47aeffc" absoluteBounds="2, 2.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataClasses1DataContext/etudiant" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23d07858-dd0c-4c54-bbfe-2d4cc20013b5" absoluteBounds="2.015, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe7160c6-3db6-4e7c-aefc-63be450c7153" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/filiere" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f367c229-72cf-47af-a044-52a62418ee8e" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 1.8862939453125); (2.25 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/filiere/filiere_etudiant" />
+      <nodes>
+        <classShapeMoniker Id="fe7160c6-3db6-4e7c-aefc-63be450c7153" />
+        <classShapeMoniker Id="60cdfcff-b070-4200-b0a5-f650a47aeffc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.4375 : 1.8862939453125); (2.4375 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/filiere/filiere_etudiant1" />
+      <nodes>
+        <classShapeMoniker Id="fe7160c6-3db6-4e7c-aefc-63be450c7153" />
+        <classShapeMoniker Id="60cdfcff-b070-4200-b0a5-f650a47aeffc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
