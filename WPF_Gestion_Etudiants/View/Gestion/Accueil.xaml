@@ -54,14 +54,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/reporting.jpg" Stretch="Uniform"/>
         </Grid.Background>
-        <Grid>
-            <!-- Image with Clipping Applied -->
-            <Image Height="100" VerticalAlignment="Top" Margin="450,30,-384,0" Source="/Assets/home.jpg">
-                <Image.Clip>
-                    <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
-                </Image.Clip>
-            </Image>
-        </Grid>
+       
         <TextBlock Text="Bienvenue sur la plateforme" Foreground="Black" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,72,0,10" Width="716"/>
         <TextBlock Text="d'administration" Foreground="Black" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,106,0,10" Width="716"/>
         <TextBlock Text="pour la Gestion" Foreground="#05b790" FontSize="26" FontWeight="Bold"  HorizontalAlignment="Left" Margin="15,137,0,10" Width="716"/>
