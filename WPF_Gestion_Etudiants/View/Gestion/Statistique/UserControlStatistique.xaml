@@ -13,10 +13,18 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-          
-        </Grid.ColumnDefinitions>
 
-        <StackPanel x:Name="infoCardStackPanel" Margin="10 0">
+        </Grid.ColumnDefinitions>
+        <Label Content="Statistique"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,0,0,0"
+            FontWeight="Bold"
+            FontSize="25"
+            Foreground="#05b790"
+            Background="White"/>
+
+        <StackPanel x:Name="infoCardStackPanel" Margin="10,51,10,-51">
             <uc:InfoCard Title="GAE" pourcentage="20" numberOfStudent="200" />
         </StackPanel>
 
@@ -26,7 +34,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="Répartition des étudiants par filières" FontSize="20" FontWeight="SemiBold" Margin="10 0"  TextAlignment="Center"  VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="0" Text="Répartition des étudiants par filières"  FontSize="20" FontWeight="SemiBold" Margin="10,68,10,0"  TextAlignment="Center"  VerticalAlignment="Top"/>
             <lvc:PieChart Grid.Row="1" Margin="10 0" LegendLocation="Bottom"
                Series="{Binding SeriesCollection}" DataClick="PieChart_DataClick"
                Hoverable="True"
@@ -43,7 +51,7 @@
 
         </Grid>
 
-       
+
 
 
 

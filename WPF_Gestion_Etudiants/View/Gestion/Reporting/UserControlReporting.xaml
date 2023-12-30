@@ -12,36 +12,42 @@
     <Grid>
 
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/reporting.jpg" Stretch="None"/>
+            <ImageBrush ImageSource="/Assets/repo1.jpg" Stretch="Fill"/>
         </Grid.Background>
 
         <Label Content="Reporting"
-           HorizontalAlignment="Center"
+           HorizontalAlignment="Left"
            VerticalAlignment="Top"
-           Margin="0,63,0,0"
+           Margin="30,10,0,0"
            FontWeight="Bold"
            FontSize="35"
            Foreground="#05b790"
            Background="White"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,225,0,0" Background="White">
-
-            <Border BorderBrush="#05b790" BorderThickness="2" Margin="0,0,20,0" Padding="10" CornerRadius="5">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,225,0,0" Background="Transparent">
+            <Border  BorderThickness="2" Margin="0,0,20,0" Padding="10" CornerRadius="5" Background="White">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="5" BlurRadius="5" Opacity="0.5"/>
+                </Border.Effect>
                 <StackPanel>
                     <TextBlock Text="Rapport pour tous les étudiants" FontWeight="Bold" FontSize="18"/>
-                    <TextBlock Text="Visibilité complete sur tous les étudiants" Background="White" FontWeight="Bold"  Margin="20" Width="233" Height="14"/>
-                    <Button VerticalAlignment="Top"  Width="150" Content="Rapport"  Background="#05b790" Click="Button_ClickRaport"/>
+                    <TextBlock Text="Visibilité complete sur tous les étudiants" Background="White" FontWeight="Bold" Margin="20" Width="233" Height="14"/>
+                    <Button VerticalAlignment="Top" Width="150" Content="Rapport" Background="#05b790" Click="Button_ClickRaport"/>
                 </StackPanel>
             </Border>
 
-            <Border BorderBrush="#05b790" BorderThickness="2" Margin="30,0,0,0" Padding="10" CornerRadius="5" Width="293">
+            <Border  BorderThickness="2" Margin="30,0,0,0" Padding="10" CornerRadius="5" Width="293" Background="White">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="5" BlurRadius="5" Opacity="0.5"/>
+                </Border.Effect>
                 <StackPanel>
                     <TextBlock Text="Rapport pour chaque étudiant" FontWeight="Bold" FontSize="18"/>
-                    <TextBlock Text="Cela dépend du CNE de l'étudiant" FontWeight="Bold"  Background="White" Margin="20" Width="196" Height="17"/>
-                    <Button VerticalAlignment="Top"  Width="150" Content="Rapport"  Background="#05b790" Click="Button_ClickForEach" />
+                    <TextBlock Text="Cela dépend du CNE de l'étudiant" FontWeight="Bold" Background="White" Margin="20" Width="196" Height="17"/>
+                    <Button VerticalAlignment="Top" Width="150" Content="Rapport" Background="#05b790" Click="Button_ClickForEach" />
                 </StackPanel>
             </Border>
         </StackPanel>
+
     </Grid>
 
 

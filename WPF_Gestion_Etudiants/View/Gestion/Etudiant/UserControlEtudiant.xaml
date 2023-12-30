@@ -7,10 +7,19 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WPF_Gestion_Etudiants.View.Gestion.Etudiant.UserControlEtudiant"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-	<Grid Background="#EAD196">
-		<telerik:RadGridView Name="myDataGridEtudiant" HorizontalAlignment="Left" Margin="279,55,0,0" VerticalAlignment="Top" Height="350" Width="495"  AutoGenerateColumns="True" SelectionChanged="RadGridView_SelectionChanged"/>
-		<telerik:RadDataForm x:Name="radDataForm" HorizontalAlignment="Left" Margin="279,55,0,0" VerticalAlignment="Top" Height="350" Width="495" CommandButtonsVisibility="All" Visibility="Collapsed" AutoGenerateFields="True"/>
-		<Label FontSize="16" FontStyle="Italic" FontWeight="DemiBold" Content="Rechercher par filière:" HorizontalAlignment="Left" Margin="5,78,0,0" VerticalAlignment="Top"/>
+    <Grid Background="White">
+        <Image Source="/Assets/accueil.jpg" />
+        <Label Content="Gestion des Etudiants"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top"
+           Margin="5,10,0,0"
+           FontWeight="Bold"
+           FontSize="25"
+           Foreground="#05b790"
+           Background="White" Width="337"/>
+        <telerik:RadGridView Name="myDataGridEtudiant" HorizontalAlignment="Left" Margin="323,54,0,0" VerticalAlignment="Top" Height="351" Width="451"  AutoGenerateColumns="True" SelectionChanged="RadGridView_SelectionChanged"/>
+        <telerik:RadDataForm x:Name="radDataForm" HorizontalAlignment="Left" Margin="279,55,0,0" VerticalAlignment="Top" Height="350" Width="495" CommandButtonsVisibility="All" Visibility="Collapsed" AutoGenerateFields="True"/>
+        <Label FontSize="16" FontStyle="Normal" FontWeight="DemiBold" Content="Rechercher par filière:" HorizontalAlignment="Left" Margin="5,78,0,0" VerticalAlignment="Top"/>
         <Grid>
             <ComboBox x:Name="filiereComboBox" HorizontalAlignment="Left" Margin="106,110,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="FiliereComboBox_SelectionChanged">
                 <ComboBoxItem Content="CP1"/>
@@ -25,13 +34,16 @@
             <Button Content="Modifier" Width="150"  Background="#05b790" HorizontalAlignment="Left" Margin="60,408,0,0" VerticalAlignment="Top" Click="Button_ClickModifier"/>
             <Button Name="ValiderMod" Visibility="Collapsed" Content="Valider la modification" Width="180"  Background="#05b790"   HorizontalAlignment="Center" Margin="0,412,0,0" VerticalAlignment="Top" Click="Button_ClickValider"/>
             <Label x:Name="typeFiliereLabel" Content="" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#05b790" FontSize="20" FontWeight="Bold"/>
-            <Grid Background="Beige" Margin="10,140,0,160" HorizontalAlignment="Left" Width="250" Height="150">
-                <Label FontWeight="ExtraBlack" Content="Informations sur la filière" HorizontalAlignment="Center" Margin="14,0,0,0" VerticalAlignment="Top"/>
-                <Label Content="Id:" HorizontalAlignment="Left" Margin="14,29,0,0" VerticalAlignment="Top"/>
-                <Label Content="Responsable:" HorizontalAlignment="Left" Margin="14,58,0,0" VerticalAlignment="Top"/>
-                <Label Name="id" Content="" HorizontalAlignment="Left" Margin="114,29,0,0" VerticalAlignment="Top"/>
-                <Label Name="responsable" Content="" HorizontalAlignment="Left" Margin="114,58,0,0" VerticalAlignment="Top"/>
-            </Grid>
+            <Border Background="Beige" Margin="10,140,0,160" HorizontalAlignment="Left" Width="250" Height="150" CornerRadius="10">
+                <Grid>
+                    <Label FontWeight="ExtraBlack" Content="Informations sur la filière" HorizontalAlignment="Center" Margin="14,0,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Id:" HorizontalAlignment="Left" Margin="14,29,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Responsable:" HorizontalAlignment="Left" Margin="14,58,0,0" VerticalAlignment="Top"/>
+                    <Label Name="id" Content="" HorizontalAlignment="Left" Margin="114,29,0,0" VerticalAlignment="Top"/>
+                    <Label Name="responsable" Content="" HorizontalAlignment="Left" Margin="114,58,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </Border>
+
         </Grid>
     </Grid>
 </UserControl>
