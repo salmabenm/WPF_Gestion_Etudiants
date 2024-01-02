@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace WPF_Gestion_Etudiants.View.Gestion.Reporting
 {
-    /// <summary>
-    /// Logique d'interaction pour selectionEtudiant.xaml
-    /// </summary>
+   
     public partial class selectionEtudiant : Window
     {
         public selectionEtudiant()

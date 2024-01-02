@@ -115,7 +115,6 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
                 <!-- Close Icon -->
-                <materialDesign:PackIcon Kind="Account" Width="148" Foreground="#07Bf96" Height="78" Opacity="0.3" Margin="0,10,0,0" RenderTransformOrigin="-11.35,3.927" HorizontalAlignment="Center"/>
 
                 <!-- Inputs -->
                 <StackPanel VerticalAlignment="Center" Margin="40,0,20,0">
