@@ -9,6 +9,7 @@
              xmlns:local="clr-namespace:WPF_Gestion_Etudiants.View.Gestion.Statistique"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -59,4 +60,5 @@
 
 
     </Grid>
+    </ScrollViewer>
 </UserControl>

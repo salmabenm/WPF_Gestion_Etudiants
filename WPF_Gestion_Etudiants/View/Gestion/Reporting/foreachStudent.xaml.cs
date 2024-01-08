@@ -32,7 +32,7 @@ namespace WPF_Gestion_Etudiants.View.Gestion.Reporting
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-11MQR6U\\SQLEXPRESS; Initial Catalog=Gestion_Etudiant; Integrated Security=true");
+                SqlConnection conn = new SqlConnection("Data Source=PC\\SQLEXPRESS; Initial Catalog=Gestion_Etudiant; Integrated Security=true");
                 StudentDataSet ds = new StudentDataSet();
                 StudentTableAdapter da = new StudentTableAdapter();
                 crptForEach cr = new crptForEach();

@@ -26,7 +26,7 @@ namespace WPF_Gestion_Etudiants.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-11MQR6U\\SQLEXPRESS;Initial Catalog=Gestion_Etudiant;Integrate" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC\\SQLEXPRESS;Initial Catalog=Gestion_Etudiant;Integrate" +
             "d Security=True;Encrypt=True;TrustServerCertificate=True")]
         public string Gestion_EtudiantConnectionString {
             get {

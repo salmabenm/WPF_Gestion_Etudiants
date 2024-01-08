@@ -60,7 +60,7 @@ namespace WPF_Gestion_Etudiants.View.Gestion.Reporting
 
         private bool DoesCNEExist(string cneValue)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-11MQR6U\\SQLEXPRESS;Initial Catalog=Gestion_Etudiant;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=PC\\SQLEXPRESS;Initial Catalog=Gestion_Etudiant;Integrated Security=True");
 
             string query = "SELECT COUNT(*) FROM etudiants WHERE CNE = @CNE";
 
